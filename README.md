@@ -1,2 +1,2 @@
 # PhD_Dissertation
-All the scripts i wrote and used in my thesis
+All the scripts i wrote and used in both my MSc and PhD theses
