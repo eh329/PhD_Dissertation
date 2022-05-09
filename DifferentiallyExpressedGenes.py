@@ -15,3 +15,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 %matplotlib inline
 sns.set()
+
+
+# Read the data
+
+data = pd.read_csv("file.csv")
+df = data.copy()
+df.head()
