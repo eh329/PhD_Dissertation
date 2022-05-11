@@ -22,3 +22,7 @@ sns.set()
 data = pd.read_csv("file.csv")
 df = data.copy()
 df.head()
+
+# Look at the columns
+
+df.columns
