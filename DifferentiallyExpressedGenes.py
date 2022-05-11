@@ -26,3 +26,7 @@ df.head()
 # Look at the columns
 
 df.columns
+
+# Columns information
+
+df.info()
