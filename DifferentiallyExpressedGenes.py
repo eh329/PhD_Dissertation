@@ -30,3 +30,12 @@ df.columns
 # Columns information
 
 df.info()
+
+# Drop the unnecessary columns 
+# Drop the rows with NaN values
+# Drop the duplicated values
+
+df.drop(["Probe Set ID", "Unigene(Avadis)", "Entrez Gene", "GO(Avadis)"], axis = 1, inplace = True)
+df.dropna(axis = 0, inplace = True)
+df.drop_duplicates("Gene Title", inplace = True)
+df.shape
