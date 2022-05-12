@@ -39,3 +39,7 @@ df.drop(["Probe Set ID", "Unigene(Avadis)", "Entrez Gene", "GO(Avadis)"], axis =
 df.dropna(axis = 0, inplace = True)
 df.drop_duplicates("Gene Title", inplace = True)
 df.shape
+
+# Columns basic statistics
+
+df.describe().T
