@@ -43,3 +43,7 @@ df.shape
 # Columns basic statistics
 
 df.describe().T
+
+df.reset_index(inplace = True)
+del df["index"]
+df.head()
