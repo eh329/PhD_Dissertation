@@ -47,3 +47,15 @@ df.describe().T
 df.reset_index(inplace = True)
 del df["index"]
 df.head()
+
+
+# Checking the distribution of the raw gene expression with histograms
+
+cols = df.drop(["Gene Symbol", "Gene Title"], axis = 1).columns
+col_list = list(cols)
+
+for feature in col_list:
+    df[feature].plot(figsize = (12, 5), title = feature,
+                xlabel = "Gene Index",
+                ylabel = "Gene Expression")
+    plt.show()
