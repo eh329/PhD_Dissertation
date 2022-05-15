@@ -59,3 +59,12 @@ for feature in col_list:
                 xlabel = "Gene Index",
                 ylabel = "Gene Expression")
     plt.show()
+
+    
+# Checking the distribution of the log10 of gene expression with histograms
+
+for feature in col_list:
+    df[feature].plot(logy = True, figsize = (12, 5), title = feature,
+                xlabel = "Gene Index",
+                ylabel = "Gene Expression")
+    plt.show()
