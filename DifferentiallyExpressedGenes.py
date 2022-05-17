@@ -79,3 +79,5 @@ for col in col_list:
     median = df[col].median(axis = 0)
     col_name = col + " norm"
     init_df[col_name] = df[col].div(df[col].median(axis = 0)) 
+
+init_df.head()
