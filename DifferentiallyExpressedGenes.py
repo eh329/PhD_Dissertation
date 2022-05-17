@@ -68,3 +68,14 @@ for feature in col_list:
                 xlabel = "Gene Index",
                 ylabel = "Gene Expression")
     plt.show()
+
+    
+# Creating a new dataset with normalized data (global median method):
+#     Divide values of each colum by the median of the same column
+
+init_df = df[["Gene Symbol", "Gene Title"]].copy()
+
+for col in col_list:
+    median = df[col].median(axis = 0)
+    col_name = col + " norm"
+    init_df[col_name] = df[col].div(df[col].median(axis = 0)) 
