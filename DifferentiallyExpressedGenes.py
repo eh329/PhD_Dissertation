@@ -81,3 +81,10 @@ for col in col_list:
     init_df[col_name] = df[col].div(df[col].median(axis = 0)) 
 
 init_df.head()
+
+init_df.to_csv("normalized_columns.csv", index = False)
+
+# Start working with the normalized values
+
+norm_data = pd.read_csv("normalized_columns.csv")
+norm_data.head()
