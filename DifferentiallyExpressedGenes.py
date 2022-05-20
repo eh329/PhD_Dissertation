@@ -90,3 +90,21 @@ norm_data = pd.read_csv("normalized_columns.csv")
 norm_data.head()
 
 norm_data.describe()
+
+
+# Forming a new dataset by:
+#    adding all the replicates to each other and calculating the mean
+#    using the mean as the final value 
+#    reducing the number of the columns into half
+
+init_norm = norm_data[["Gene Symbol", "Gene Title"]].copy()
+
+init_norm["SS Th0"] = norm_data[["SS1 Th0 norm", "SS2 Th0 norm"]].mean(axis = 1)
+init_norm["SS Th0 Dex"] = norm_data[["SS1 Th0 Dex norm", "SS2 Th0 Dex norm"]].mean(axis = 1)
+init_norm["SS Th17"] = norm_data[["SS1 Th17 norm", "SS2 Th17 norm"]].mean(axis = 1)
+init_norm["SS Th17 Dex"] = norm_data[["SS1 Th17 Dex norm", "SS2 Th17 Dex norm"]].mean(axis = 1)
+
+init_norm["SR Th0"] = norm_data[["SR1 Th0 norm", "SR2 Th0 norm", "SR3 Th0 norm"]].mean(axis = 1)
+init_norm["SR Th0 Dex"] = norm_data[["SR1 Th0 Dex norm", "SR2 Th0 Dex norm", "SR3 Th0 Dex norm"]].mean(axis = 1)
+init_norm["SR Th17"] = norm_data[["SR1 Th17 norm", "SR2 Th17 norm", "SR3 Th17 norm"]].mean(axis = 1)
+init_norm["SR Th17 Dex"] = norm_data[["SR1 Th17 Dex norm", "SR2 Th17 Dex norm", "SR3 Th17 Dex norm"]].mean(axis = 1)
