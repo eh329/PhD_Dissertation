@@ -108,3 +108,6 @@ init_norm["SR Th0"] = norm_data[["SR1 Th0 norm", "SR2 Th0 norm", "SR3 Th0 norm"]
 init_norm["SR Th0 Dex"] = norm_data[["SR1 Th0 Dex norm", "SR2 Th0 Dex norm", "SR3 Th0 Dex norm"]].mean(axis = 1)
 init_norm["SR Th17"] = norm_data[["SR1 Th17 norm", "SR2 Th17 norm", "SR3 Th17 norm"]].mean(axis = 1)
 init_norm["SR Th17 Dex"] = norm_data[["SR1 Th17 Dex norm", "SR2 Th17 Dex norm", "SR3 Th17 Dex norm"]].mean(axis = 1)
+
+
+init_norm.head()
