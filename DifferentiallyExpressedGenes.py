@@ -111,3 +111,8 @@ init_norm["SR Th17 Dex"] = norm_data[["SR1 Th17 Dex norm", "SR2 Th17 Dex norm", 
 
 
 init_norm.head()
+
+init_norm.to_csv("reduced_norm_col.csv", index = False)
+
+reduced_col = pd.read_csv("reduced_norm_col.csv")
+reduced_col.head()
