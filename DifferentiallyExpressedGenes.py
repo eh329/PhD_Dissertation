@@ -88,3 +88,5 @@ init_df.to_csv("normalized_columns.csv", index = False)
 
 norm_data = pd.read_csv("normalized_columns.csv")
 norm_data.head()
+
+norm_data.describe()
