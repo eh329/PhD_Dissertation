@@ -118,3 +118,13 @@ reduced_col = pd.read_csv("reduced_norm_col.csv")
 reduced_col.head()
 
 reduced_col.describe()
+
+# Dividing each column with Dex to the corresponding column without it
+# Then transfer the values to their coressponding log2 values
+
+ratio_log = reduced_col[["Gene Symbol", "Gene Title"]].copy()
+
+ratio_log["SS Th0 Dex/Th0 Log"] = np.log2(reduced_col["SS Th0 Dex"].div(reduced_col["SS Th0"]))
+ratio_log["SS Th17 Dex/Th17 Log"] = np.log2(reduced_col["SS Th17 Dex"].div(reduced_col["SS Th17"]))
+ratio_log["SR Th0 Dex/Th0 Log"] = np.log2(reduced_col["SR Th0 Dex"].div(reduced_col["SR Th0"]))
+ratio_log["SR Th17 Dex/Th17 Log"] = np.log(reduced_col["SR Th17 Dex"].div(reduced_col["SR Th17"]))
