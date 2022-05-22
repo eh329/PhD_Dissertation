@@ -116,3 +116,5 @@ init_norm.to_csv("reduced_norm_col.csv", index = False)
 
 reduced_col = pd.read_csv("reduced_norm_col.csv")
 reduced_col.head()
+
+reduced_col.describe()
