@@ -134,3 +134,6 @@ ratio_log.head()
 ratio_log.describe()
 
 ratio_log.to_csv("ratio_log.csv", index = False)
+
+last = pd.read_csv("ratio_log.csv")
+last.head()
