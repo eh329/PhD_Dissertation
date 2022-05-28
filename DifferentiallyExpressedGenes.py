@@ -139,3 +139,9 @@ last = pd.read_csv("ratio_log.csv")
 last.head()
 
 last.columns
+
+anova_df = last[last['SR Th17 Dex/Th17 Log'] > last['SS Th17 Dex/Th17 Log']]
+anova = anova_df[['SS Th0 Dex/Th0 Log',
+       'SS Th17 Dex/Th17 Log', 'SR Th0 Dex/Th0 Log', 'SR Th17 Dex/Th17 Log']]
+
+anova.head()
