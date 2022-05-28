@@ -128,3 +128,9 @@ ratio_log["SS Th0 Dex/Th0 Log"] = np.log2(reduced_col["SS Th0 Dex"].div(reduced_
 ratio_log["SS Th17 Dex/Th17 Log"] = np.log2(reduced_col["SS Th17 Dex"].div(reduced_col["SS Th17"]))
 ratio_log["SR Th0 Dex/Th0 Log"] = np.log2(reduced_col["SR Th0 Dex"].div(reduced_col["SR Th0"]))
 ratio_log["SR Th17 Dex/Th17 Log"] = np.log(reduced_col["SR Th17 Dex"].div(reduced_col["SR Th17"]))
+
+ratio_log.head()
+
+ratio_log.describe()
+
+ratio_log.to_csv("ratio_log.csv", index = False)
