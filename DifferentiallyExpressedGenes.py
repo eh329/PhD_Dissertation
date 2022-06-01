@@ -145,3 +145,15 @@ anova = anova_df[['SS Th0 Dex/Th0 Log',
        'SS Th17 Dex/Th17 Log', 'SR Th0 Dex/Th0 Log', 'SR Th17 Dex/Th17 Log']]
 
 anova.head()
+
+
+anova_val = anova.values
+rows = range(anova_val.shape[0])
+cols = range(anova_val.shape[1])
+f_stat = []
+p_val = []
+
+for i, j in product(rows, cols):
+    f, p = f_oneway(anova_val[i,:], anova_val[:,j])
+    f_stat.append(f)
+    p_val.append(p)
