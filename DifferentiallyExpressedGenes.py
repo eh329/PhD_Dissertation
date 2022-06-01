@@ -164,3 +164,4 @@ for i, j in product(rows, cols):
 
 anova_df["f statistics"] = pd.Series(f_stat)
 anova_df["anova p value"] = pd.Series(p_val)
+anova_df.head()
