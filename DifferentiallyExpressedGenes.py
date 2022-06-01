@@ -157,3 +157,10 @@ for i, j in product(rows, cols):
     f, p = f_oneway(anova_val[i,:], anova_val[:,j])
     f_stat.append(f)
     p_val.append(p)
+
+    
+# Adding f statistics and p value for the calculation as column
+# Adding the p value f
+
+anova_df["f statistics"] = pd.Series(f_stat)
+anova_df["anova p value"] = pd.Series(p_val)
