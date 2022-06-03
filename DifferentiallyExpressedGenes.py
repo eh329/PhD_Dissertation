@@ -167,3 +167,9 @@ anova_df["anova p value"] = pd.Series(p_val)
 anova_df.head()
 
 anova_df.to_csv("Final_File.csv", index = False)
+
+deg_df = pd.read_csv("Final_File.csv")
+deg = deg_df.copy()
+deg.head()
+
+
