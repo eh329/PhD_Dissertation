@@ -175,3 +175,13 @@ deg.head()
 
 deg_fin = deg[deg["anova p value"] <= 0.001]
 deg_fin.shape
+
+# Performing Tukey test
+
+tukey_prep = deg_fin[['SS Th0 Dex/Th0 Log',
+       'SS Th17 Dex/Th17 Log', 'SR Th0 Dex/Th0 Log', 'SR Th17 Dex/Th17 Log']]
+y = tukey_prep.melt(var_name = 'groups', value_name = 'values')
+tukey = pairwise_tukeyhsd(endog = y['values'],
+                          groups = y['groups'],
+                          alpha = 0.001)
+print(tukey)
