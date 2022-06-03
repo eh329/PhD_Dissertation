@@ -173,3 +173,5 @@ deg = deg_df.copy()
 deg.head()
 
 
+deg_fin = deg[deg["anova p value"] <= 0.001]
+deg_fin.shape
